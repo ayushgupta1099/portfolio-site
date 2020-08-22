@@ -1,0 +1,550 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+
+/* background color #130f40 */
+/* White text #c7ecee */
+
+:root {
+  --text-light: #c7ecee;
+  --dark-text: #130f40;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+}
+body {
+  background-color: #c8d6e5;
+}
+
+.landing {
+  min-height: 100vh;
+  background-color: var(--dark-text);
+}
+.navbar {
+  text-align: center;
+}
+.navbar div {
+  display: inline-block;
+  list-style: none;
+  padding: 20px 20px 0 30px;
+}
+.navbar div a {
+  text-decoration: none;
+  font-variant: small-caps;
+  color: var(--text-light);
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.navbar div :last-child {
+  margin-right: 0;
+}
+
+.navbar div:after {
+  content: "";
+  display: block;
+  margin: auto;
+  height: 3px;
+  width: 0px;
+  transition: width 0.5s ease, background-color 0.5s ease;
+}
+.navbar div:hover:after {
+  width: 100%;
+  background: #e31b6d;
+}
+
+.about {
+  margin: auto;
+  margin-top: 12%;
+  color: var(--text-light);
+  font-size: 32px;
+  width: 700px;
+  text-align: center;
+  line-height: 1.4em;
+}
+.redtext {
+  color: #bd0753;
+}
+.start-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+#start {
+  text-decoration: none;
+  padding: 8px;
+  padding-left: 13px;
+  margin-top: 10%;
+  color: #e31b6d;
+  background-color: #130f40;
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  border: 2.4px solid var(--text-light);
+  border-radius: 12px;
+}
+
+.chevrons {
+  position: relative;
+  top: 5px;
+}
+
+#pf-description {
+  padding: 50px 0 100px 0;
+  font-weight: 600;
+  text-align: center;
+  font-size: 40px;
+  color: var(--dark-text);
+}
+
+.portfolio-container {
+  width: 100%;
+  margin: auto 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.portfolio-container .box {
+  position: relative;
+  width: 390px;
+  height: 264px;
+  margin: 36px;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+.portfolio-container .box .imgBox {
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-container .box .imgBox img {
+  max-width: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.portfolio-container .box:hover .imgBox img {
+  transform: scale(1.1);
+}
+
+.project-description {
+  text-align: center;
+  position: absolute;
+  bottom: -57.6px;
+  background: var(--dark-text);
+  width: 100%;
+  padding: 12.8px;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.portfolio-container .imgBox:hover .project-description {
+  bottom: 0px;
+}
+
+.category {
+  display: inline-block;
+  color: #e31b6d;
+  font-size: 21.6px;
+  position: relative;
+  padding: 0 17.6px;
+}
+
+.category::before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 2.5px;
+  background: #e31b6d;
+  left: 0;
+  top: 14px;
+}
+
+.category::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 2.5px;
+  background: #e31b6d;
+  right: 0;
+  top: 15px;
+}
+
+.title {
+  font-size: 17.6px;
+  color: var(--text-light);
+  font-weight: 500;
+  margin: 3.2px 0;
+}
+
+.date {
+  font-size: 17.6px;
+  font-style: italic;
+  color: #e31b6d;
+  margin-bottom: 18px;
+}
+
+.btn {
+  border-radius: 32px;
+  font-size: 17.6px;
+  display: inline-block;
+  color: #e31b6d;
+  text-decoration: none;
+  border: 0.8px solid #e31b6d;
+  padding: 4.8px 16px;
+  opacity: 1;
+  transition: 0.3s linear;
+}
+
+.btn:hover {
+  color: var(--text-light);
+  background: #e31b6d;
+}
+
+#about-body-div {
+  margin: 120px 0 100px 0;
+  width: 100%;
+}
+#about-heading {
+  padding-top: 50px;
+  padding-bottom: 130px;
+  text-align: center;
+  font-size: 40px;
+  color: var(--dark-text);
+  font-weight: 600;
+}
+.about-main-flex {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.pro_pic {
+  height: 280px;
+  border-radius: 50%;
+}
+
+.about-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.about-body-p {
+  align-self: center;
+  color: var(--dark-text);
+  text-align: center;
+  line-height: 1.9em;
+  font-size: 21.6px;
+  width: 720px;
+}
+
+.skills {
+  margin-top: 50px;
+  width: 100%;
+  text-align: center;
+}
+
+.column-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.skills-heading {
+  color: var(--dark-text);
+  font-size: 32px;
+  margin: 40px 50px 8px 50px;
+  font-weight: bolder;
+}
+.skills-p {
+  color: var(--dark-text);
+  text-align: center;
+  width: 400px;
+  font-size: 18px;
+  margin: 0px 50px 80px 50px;
+}
+
+.skills-body {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #e31b6d;
+}
+
+.skills-body-p {
+  color: var(--dark-text);
+  font-size: 18px;
+  margin-bottom: 80px;
+}
+
+.tools {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #e31b6d;
+}
+
+.tools-list {
+  font-size: 18px;
+}
+
+/* .web, .designer{
+  border: 0.5px solid #b2bec3;
+  
+}
+.designer{
+  border-right: none;
+  border-radius:30px 0 0 30px ;
+}
+.web{
+  border-radius: 0 30px 30px 0;
+} */
+
+.resume {
+  margin: 80px 0 60px 0;
+  text-align: center;
+}
+
+.resume-main {
+  padding: 15px;
+  text-decoration: none;
+  color: #e31b6d;
+  background-color: var(--dark-text);
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  border-radius: 12px;
+}
+
+#contact {
+  text-align: center;
+  width: 100%;
+  background: var(--dark-text);
+}
+.contact-head {
+  font-size: 32px;
+  margin-top: 50px;
+  color: var(--text-light);
+  margin-bottom: 80px;
+}
+.email-desc {
+  margin-bottom: 20px;
+  color: var(--text-light);
+  font-size: 24px;
+}
+
+.main-email a {
+  text-decoration: none;
+  color: #e31b6d;
+  font-weight: bold;
+  font-size: 28px;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+.icons a {
+  color: #e31b6d;
+}
+
+.feather-16 {
+  height: 28px;
+  width: 28px;
+}
+
+.insta,
+.github,
+.linkedin,
+.facebook {
+  margin: 0 32px 0 32px;
+}
+
+.insta a:hover {
+  color: #bc2a8d;
+  cursor: pointer;
+}
+
+.linkedin a:hover {
+  color: #0e76a8;
+  cursor: pointer;
+}
+
+.facebook a:hover {
+  color: #3b5998;
+  cursor: pointer;
+}
+.github a:hover {
+  color: #f1502f;
+  cursor: pointer;
+}
+
+.copyright {
+  font-size: 18.4px;
+  color: var(--text-light);
+  text-align: center;
+  margin: 70px 0 20px 0;
+}
+
+/* Media Query Starts */
+
+@media (max-width: 600px) {
+  .navbar div {
+    padding: 0;
+    margin: 20px;
+    margin-top: 50px;
+  }
+
+  .navbar div a {
+    font-size: 22px;
+  }
+
+  .about {
+    font-size: 20px;
+    width: 350px;
+    margin-top: 43%;
+  }
+  #start {
+    padding: 4px 0 8px 8px;
+    margin-top: 45%;
+  }
+
+  #pf-description {
+    font-size: 25px;
+    padding-bottom: 20px;
+  }
+
+  .portfolio-container .box {
+    width: 300px;
+    height: 200px;
+    margin: 40px;
+  }
+  .project-description {
+    bottom: 0px;
+  }
+
+  .category::before {
+    top: 12px;
+  }
+
+  .category::after {
+    top: 12px;
+  }
+  .title {
+    font-size: 15px;
+  }
+  .category {
+    font-size: 17px;
+  }
+  .date {
+    font-size: 15px;
+  }
+
+  .btn {
+    font-size: 12.6px;
+    font-weight: bold;
+    background-color: #e31b6d;
+    color: #2f3640;
+  }
+
+  #about-body-div {
+    margin: 70px 0 70px 0;
+  }
+  #about-heading {
+    font-size: 25px;
+    padding-bottom: 90px;
+  }
+
+  .about-main-flex {
+    display: block;
+    text-align: center;
+  }
+  .pro_pic {
+    height: 170px;
+    margin-bottom: 50px;
+  }
+
+  .about-body-p {
+    text-align: center;
+    width: 320px;
+    font-size: 15px;
+  }
+
+  .column-wrapper {
+    display: block;
+  }
+
+  .designer {
+    margin-bottom: 120px;
+  }
+  .skills-heading {
+    font-size: 25px;
+    margin-bottom: 6px;
+  }
+
+  .skills-p {
+    width: auto;
+    font-size: 15px;
+    margin-bottom: 40px;
+  }
+
+  .skills-body {
+    font-size: 20px;
+    margin-bottom: 4px;
+  }
+  .skills-body-p {
+    font-size: 15px;
+    margin-bottom: 40px;
+  }
+  .tools {
+    font-size: 20px;
+    margin-bottom: 4px;
+  }
+  .tools-list {
+    font-size: 15px;
+    margin-bottom: 50px;
+  }
+  .resume {
+    margin: 30px 0 30px 0;
+  }
+
+  .resume-main {
+    font-size: 15px;
+    padding: 8px;
+  }
+
+  .contact-head {
+    font-size: 25px;
+    margin-bottom: 50px;
+  }
+
+  .email-desc {
+    margin-bottom: 15px;
+    color: whitesmoke;
+    font-size: 20px;
+  }
+  .main-email a {
+    font-size: 18px;
+  }
+
+  .feather-16 {
+    height: 18px;
+    width: 18px;
+  }
+
+  .insta,
+  .github,
+  .linkedin,
+  .facebook {
+    margin: -30px 25px 10px 25px;
+  }
+
+  .copyright {
+    font-size: 12px;
+    margin-top: 30px;
+  }
+}
